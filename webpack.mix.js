@@ -14,4 +14,5 @@ let mix = require('laravel-mix');
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css')
    .styles('resources/assets/css/auth.css', 'public/css/auth.css')
-   .styles('resources/assets/css/welcome.css', 'public/css/welcome.css');
+   .styles('resources/assets/css/welcome.css', 'public/css/welcome.css')
+   .styles('resources/assets/css/dashboard.css', 'public/css/dashboard.css');

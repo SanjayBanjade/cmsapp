@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5bca48e56bbf3a25645858fcab9c285",
+    "content-hash": "bfa5fba50dc6b5abbb5be45e908d8a95",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -452,6 +452,43 @@
                 }
             ],
             "time": "2015-04-20T18:58:01+00:00"
+        },
+        {
+            "name": "koenhoeijmakers/laravel-argon2",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/koenhoeijmakers/laravel-argon2.git",
+                "reference": "73869e254f8784b9c97b24741cc7b401b37cc303"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/koenhoeijmakers/laravel-argon2/zipball/73869e254f8784b9c97b24741cc7b401b37cc303",
+                "reference": "73869e254f8784b9c97b24741cc7b401b37cc303",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/hashing": "^5.0",
+                "php": "^7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "KoenHoeijmakers\\LaravelArgon2\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Koen Hoeijmakers",
+                    "email": "koen@hoeijmakers.me"
+                }
+            ],
+            "description": "Argon2 implementation",
+            "time": "2017-07-31T19:53:12+00:00"
         },
         {
             "name": "laravel/framework",

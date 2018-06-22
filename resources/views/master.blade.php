@@ -12,11 +12,11 @@
 
   <body class="text-center">
     <div id="cms-app">
-        @yield('welcome-descr')
-        
-            @yield('login')
+          @yield('welcome-descr')
+          
+              @yield('login')
 
-            @yield('register')
+              @yield('register')
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
   </body>

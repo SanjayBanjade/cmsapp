@@ -1,5 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use App\User;
+use App\Post;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,14 +15,28 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware(['authenticated'])->group(function() {
+	Route::get('/', function () {
+	    return view('welcome');
+	})->name('welcome');
+
+	Route::get('/login', 'Authentication\LoginController@showLoginForm');
+	Route::post('/login', 'Authentication\LoginController@authenticate');
+
+	Route::get('register', 'Authentication\RegisterController@showRegistrationForm');
+	Route::post('register', 'Authentication\RegisterController@create');
 });
 
-Route::resource('register', 'Authentication\RegisterController')->only([
-	'index', 'store'
-]);
+Route::get('/logout', function() {
+	Auth::logout();
+	return redirect('/');
+})->name('logout');
 
-Route::get('/login', function() {
-	return view('auth.login');
-})->name('login');
+Route::resource('dashboard', 'Dashboard\DashboardController', [
+	'names' => [
+		'index'=>'dashboard',
+		'create'=>'dashcreate'
+	]
+])->middleware('auth');
+
+Route::view('profile', 'dashboard.profile');

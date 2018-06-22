@@ -23,8 +23,8 @@
     <h1 class="cover-heading">ULTIMATE CMS</h1>
     <p class="lead">Create your subscribers. Create your posts. Edit your posts. Delete your posts. Re-create your posts. See how your subscribers are doing and earn money making them buy products.</p>
     <p class="lead">
-      <a href="{{route('login')}}" class="btn btn-lg btn-secondary">Login</a>
-      <a href="{{route('register')}}" class="btn btn-lg btn-secondary">Register</a>
+      <a href="/login" class="btn btn-lg btn-secondary">Login</a>
+      <a href="/register" class="btn btn-lg btn-secondary">Register</a>
     </p>
   </main>
 
